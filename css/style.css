@@ -567,6 +567,7 @@ ol {
 
 .fa {
 	color: #03379B;
+	fill: #03379B;
 }
 
 .fa .bars {
@@ -596,8 +597,9 @@ ol {
 	top: 46px;
 	width: 100%;
 	z-index: 9;
-	background: #ffffff;
+	background: #F1592B;
 }
+
 
 .hero.hero-normal .hero__search {
 	margin-bottom: 0;
@@ -608,6 +610,10 @@ ol {
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
+}
+
+#product-hero-category {
+	background: #F1592B;
 }
 
 .hero__categories__all:hover {
@@ -3631,8 +3637,27 @@ ol {
 	.edit-section .edit-form .edit-container {
 		display: flex;
 		flex-direction: column;
-		padding: 20px;		
+		padding: 20px;
+		/* transform:scale(0);
+        animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;		 */
 	}
+
+	/* .fa-pen {
+		transform:scaleY(.01) scaleX(0);
+		animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+	} */
+
+	/* @keyframes unfoldIn {
+		0% {
+		  transform:scaleY(.005) scaleX(0);
+		}
+		50% {
+		  transform:scaleY(.005) scaleX(1);
+		}
+		100% {
+		  transform:scaleY(1) scaleX(1);
+		}
+	  } */
 
 	.edit-section .edit-form .edit-container .edit-btn {
 		margin-top: 1em;
@@ -3673,6 +3698,7 @@ ol {
 		border-radius: 5px;
 	}
 
+
 	.new-product-btn:hover {
 		background-color: #ff8b3d;
 	}
@@ -3681,6 +3707,7 @@ ol {
 		margin-left: 2em;
 	}
 
+
 	.add-product-section {
 		width: 100%;
 		margin: 2em auto;
@@ -3688,9 +3715,12 @@ ol {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		transition: transform 0.4s, top 0.4s;
 		display: none;
+		animation-name: dropdown;
+        animation-duration: 4s;
 	}
+
+	
 
 	.open-add-product-popup {
 		display: flex;
@@ -3733,7 +3763,7 @@ ol {
 
 	.close-btn {
 		padding: 5px;
-		border: none;
+		border: 2px solid #e05421;
 		outline: none;
 		border-radius: 5px;
 		width: 50%;

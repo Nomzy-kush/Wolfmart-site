@@ -227,22 +227,31 @@
 
 const popup = document.getElementById('popup');
 
-function openPopup () {
-    popup.classList.add('open-popup')
+// function openPopup (e) {
+//     popup.classList.add('open-popup');
+//     e.preventDefault();
+// }
+
+const openPopup = (e) => {
+    popup.classList.add('open-popup');
+    e.preventDefault(); 
 }
 
-function closePopup () {
-    popup.classList.remove('open-popup')
+function closePopup (e) {
+    popup.classList.remove('open-popup');
+    e.preventDefault();
 }
 
 
 const AddProductPopup = document.getElementById('add-product-popup');
-function showAddProductForm() {
-    AddProductPopup.classList.add('open-add-product-popup')
+function showAddProductForm (e) {
+    AddProductPopup.classList.add('open-add-product-popup');
+    e.preventDefault();
 }
 
-function closeAddProductForm() {
-    AddProductPopup.classList.remove('open-add-product-popup')
+function closeAddProductForm (e) {
+    AddProductPopup.classList.remove('open-add-product-popup');
+    e.preventDefault();
 }
 
 
